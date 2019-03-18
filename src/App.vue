@@ -1,29 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+    <div id="app">
+        <Navbar/>
+        <div class="columns">
+            <div class="column is-2">
+                <Menu/>
+            </div>
+            <div class="column">
+                <Card/>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+    import {Component, Vue} from 'vue-property-decorator';
+    import Menu from '@/components/Menu.vue';
+    import Navbar from '@/components/Navbar.vue';
+    import Card from '@/components/Card.vue';
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
+    @Component({
+        components: {
+            Navbar,
+            Menu,
+            Card
+        },
+    })
+    export default class App extends Vue {
+        private tabSelected: number = 1;
+
+        public changeTab(index: number) {
+            this.tabSelected = index;
+            this.$forceUpdate();
+        }
+    }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    @import '@/global.scss';
 </style>
