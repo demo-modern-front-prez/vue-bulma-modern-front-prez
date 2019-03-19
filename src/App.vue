@@ -22,7 +22,7 @@
         components: {
             Navbar,
             Menu,
-            Card
+            Card,
         },
     })
     export default class App extends Vue {

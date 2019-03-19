@@ -8,7 +8,7 @@
             </div>
             <div class="card-header">
                 <span class="card-header-title"
-                      v-on:click="changeTab('column')">{{tabSelected.toLocaleUpperCase()}}</span>
+                      v-on:click="changeTab('column')">TITLE</span>
             </div>
             <div class="card-content">
                 <div class="media">
@@ -23,53 +23,66 @@
                     </div>
                 </div>
             </div>
-            <footer class="card-footer">
-                <a class="card-footer-item">MY BIGGGG FOOOOTTTTEEERRR <span class="purple-beauty"><3</span></a>
-            </footer>
+            <div class="content identitycard">
+                Sed in lorem ac augue ornare iaculis. Maecenas sollicitudin, magna sit amet luctus volutpat,
+                nisl justo
+                suscipit tellus, id aliquet sapien dolor ut felis. Maecenas quis luctus mi. Nullam non diam
+                mauris. Nunc
+                vitae tincidunt erat. Sed vestibulum ligula nec ullamcorper bibendum. In euismod lectus quam.
+                Nunc felis
+                arcu, auctor nec odio et, cursus aliquet odio. Nunc dui tellus, laoreet a augue et, luctus
+                finibus leo.
+                Donec eu ornare arcu, ac mattis ipsum. In tincidunt eros eget eros tincidunt, et pharetra nulla
+                pulvinar. Suspendisse ornare tempus mauris ut blandit. Vestibulum accumsan felis at eros varius
+                hendrerit. Ut pharetra dolor ac cursus faucibus.
+            </div>
+            <FooterCard/>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from "vue-property-decorator";
-    import Column from "@/components/Column.vue";
-    import Grid from "@/components/Grid.vue";
-    import ProgressBar from "@/components/ProgressBar.vue";
-    import EventBus from "../services/event-bus.vue";
+    import {Component, Vue} from 'vue-property-decorator';
+    import Column from '@/components/Column.vue';
+    import Grid from '@/components/Grid.vue';
+    import ProgressBar from '@/components/ProgressBar.vue';
+    import EventBus from '../services/event-bus.vue';
+    import FooterCard from '@/components/FooterCard.vue';
 
     @Component({
         components: {
+            FooterCard,
             Column,
             Grid,
             Card,
-            ProgressBar
+            ProgressBar,
         },
     })
     export default class Card extends Vue {
-        private tabSelected: string = "column";
+        private tabSelected: string = 'column';
         private havePicture: boolean = false;
 
         private created() {
             this.onGetEvent();
         }
 
-        public changeTab(index: string) {
+        private changeTab(index: string) {
             this.tabSelected = index;
             this.$forceUpdate();
         }
 
-        public onGetEvent() {
-            EventBus.$on("event-menu", (message: string) => {
+        private onGetEvent() {
+            EventBus.$on('event-menu', (message: string) => {
                 this.tabSelected = message;
                 this.$forceUpdate();
             });
         }
 
-        public pictureTrue() {
+        private pictureTrue() {
             this.havePicture = true;
         }
 
-        public pictureFalse() {
+        private pictureFalse() {
             this.havePicture = false;
         }
     }
