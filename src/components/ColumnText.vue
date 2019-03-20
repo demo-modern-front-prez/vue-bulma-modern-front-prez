@@ -8,6 +8,7 @@
                 <div v-for="element of line" class="columns element">
 
                     <div class="column is-half border-right">
+                        <!-- TODO Il doit y avoir une librarie lorem ipsum qui existe, ça permettra d'alléger ton html: https://www.npmjs.com/package/vue-lorem-ipsum -->
                         Sed in lorem ac augue ornare iaculis. Maecenas sollicitudin, magna sit amet luctus volutpat,
                         nisl justo
                         suscipit tellus, id aliquet sapien dolor ut felis. Maecenas quis luctus mi. Nullam non diam

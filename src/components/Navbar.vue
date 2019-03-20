@@ -2,16 +2,14 @@
     <div>
         <nav class="navbar is-link" role="navigation">
             <a class="navbar-item">
-
                 Bulma navbar
             </a>
-
-                <a class="navbar-link">
-                    Home
-                </a>
-                <a class="navbar-link">
-                    Element 1
-                </a>
+            <a class="navbar-link">
+                Home
+            </a>
+            <a class="navbar-link">
+                Element 1
+            </a>
         </nav>
     </div>
 </template>

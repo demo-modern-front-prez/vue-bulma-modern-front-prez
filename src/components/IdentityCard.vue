@@ -20,6 +20,7 @@
                 </div>
             </div>
             <div class="content identitycard">
+                <!-- TODO Idem ici pour la libraries lorem ipsum : https://www.npmjs.com/package/vue-lorem-ipsum-->
                 Sed in lorem ac augue ornare iaculis. Maecenas sollicitudin, magna sit amet luctus volutpat,
                 nisl justo
                 suscipit tellus, id aliquet sapien dolor ut felis. Maecenas quis luctus mi. Nullam non diam
