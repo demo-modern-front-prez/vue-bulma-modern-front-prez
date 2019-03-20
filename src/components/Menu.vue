@@ -7,9 +7,10 @@
                 </p>
                 <ul class="menu-list">
                     <li><a v-bind:class="{'is-active': tableSelected==='column'}" v-on:click="emitEvent('column')">Column</a></li>
-                    <li><a v-bind:class="{'is-active': tableSelected==='grid'}" v-on:click="emitEvent('grid')">Grid</a></li>
+                    <li><a v-bind:class="{'is-active': tableSelected==='columnText'}" v-on:click="emitEvent('grid')">Column text</a></li>
                     <li><a v-bind:class="{'is-active': tableSelected==='progressbar'}" v-on:click="emitEvent('progressbar')">Progress Bar</a></li>
                     <li><a v-bind:class="{'is-active': tableSelected==='identitycard'}" v-on:click="emitEvent('identitycard')">Identity card</a></li>
+                    <li><a v-bind:class="{'is-active': tableSelected==='whitepage'}" v-on:click="emitEvent('whitepage')">White Page</a></li>
                 </ul>
                 <p class="menu-label">
                     Menu Label 2

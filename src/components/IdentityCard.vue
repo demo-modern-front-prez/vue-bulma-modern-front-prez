@@ -6,10 +6,6 @@
                     <img src="http://www.reelfanatics.com/wp-content/uploads/2012/11/Casino.jpg">
                 </figure>
             </div>
-            <div class="card-header">
-                <span class="card-header-title"
-                      v-on:click="changeTab('column')">TITLE</span>
-            </div>
             <div class="card-content">
                 <div class="media">
                     <div class="media-left">
@@ -44,7 +40,7 @@
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
     import Column from '@/components/Column.vue';
-    import Grid from '@/components/Grid.vue';
+    import Grid from '@/components/ColumnText.vue';
     import ProgressBar from '@/components/ProgressBar.vue';
     import EventBus from '../services/event-bus.vue';
     import FooterCard from '@/components/FooterCard.vue';
