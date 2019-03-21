@@ -4,6 +4,7 @@
         <Grid v-if="tabSelected === 'grid'"/>
         <ProgressBar v-if="tabSelected === 'progressbar'"/>
         <IdentityCard v-if="tabSelected === 'identitycard'"/>
+        <FormComponents v-if="tabSelected === 'formcomponents'"/>
         <WhitePage v-if="tabSelected === 'whitepage'"/>
     </div>
 </template>
@@ -13,13 +14,15 @@
     import Column from '../components/Column.vue';
     import Grid from '../components/ColumnText.vue';
     import ProgressBar from '../components/ProgressBar.vue';
-    import EventBus from '../services/event-bus.vue';
     import IdentityCard from '../components/IdentityCard.vue';
     import WhitePage from '../components/WhitePage.vue';
     import FooterCard from '@/components/FooterCard.vue';
+    import FormComponents from '@/components/FormComponents.vue';
+    import {EventBus} from '@/main';
 
     @Component({
         components: {
+            FormComponents,
             WhitePage,
             IdentityCard,
             Column,

@@ -1,6 +1,12 @@
 <template>
     <div>
+        <div class="card-placement">
+            <div class="card card-component">
+                <div class="card-content">
 
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 

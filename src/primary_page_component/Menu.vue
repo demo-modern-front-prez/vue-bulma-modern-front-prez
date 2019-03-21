@@ -10,6 +10,7 @@
                     <li><a v-bind:class="{'is-active': tableSelected==='columnText'}" v-on:click="emitEvent('grid')">Column text</a></li>
                     <li><a v-bind:class="{'is-active': tableSelected==='progressbar'}" v-on:click="emitEvent('progressbar')">Progress Bar</a></li>
                     <li><a v-bind:class="{'is-active': tableSelected==='identitycard'}" v-on:click="emitEvent('identitycard')">Identity card</a></li>
+                    <li><a v-bind:class="{'is-active': tableSelected==='formcomponents'}" v-on:click="emitEvent('formcomponents')">Form components</a></li>
                     <li><a v-bind:class="{'is-active': tableSelected==='whitepage'}" v-on:click="emitEvent('whitepage')">White Page</a></li>
                 </ul>
                 <p class="menu-label">
@@ -36,7 +37,7 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    import EventBus from '../services/event-bus.vue';
+    import {EventBus} from '@/main';
 
     @Component
     export default class Menu extends Vue {

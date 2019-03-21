@@ -10,7 +10,8 @@
                 <div class="media">
                     <div class="media-left">
                         <figure class="image is-128x128">
-                            <img src="https://media1.tenor.com/images/2b6138c8abd50d00965e784d948a88df/tenor.gif?itemid=4733491" alt="Well done">
+                            <img src="https://media1.tenor.com/images/2b6138c8abd50d00965e784d948a88df/tenor.gif?itemid=4733491"
+                                 alt="Well done">
                         </figure>
                     </div>
                     <div class="media-content">
@@ -20,17 +21,7 @@
                 </div>
             </div>
             <div class="content identitycard">
-                Sed in lorem ac augue ornare iaculis. Maecenas sollicitudin, magna sit amet luctus volutpat,
-                nisl justo
-                suscipit tellus, id aliquet sapien dolor ut felis. Maecenas quis luctus mi. Nullam non diam
-                mauris. Nunc
-                vitae tincidunt erat. Sed vestibulum ligula nec ullamcorper bibendum. In euismod lectus quam.
-                Nunc felis
-                arcu, auctor nec odio et, cursus aliquet odio. Nunc dui tellus, laoreet a augue et, luctus
-                finibus leo.
-                Donec eu ornare arcu, ac mattis ipsum. In tincidunt eros eget eros tincidunt, et pharetra nulla
-                pulvinar. Suspendisse ornare tempus mauris ut blandit. Vestibulum accumsan felis at eros varius
-                hendrerit. Ut pharetra dolor ac cursus faucibus.
+                {{lorem}}
             </div>
             <FooterCard/>
         </div>
@@ -42,8 +33,8 @@
     import Column from '@/components/Column.vue';
     import Grid from '@/components/ColumnText.vue';
     import ProgressBar from '@/components/ProgressBar.vue';
-    import EventBus from '../services/event-bus.vue';
     import FooterCard from '@/components/FooterCard.vue';
+    import {EventBus} from '@/main';
 
     @Component({
         components: {
@@ -57,9 +48,13 @@
     export default class Card extends Vue {
         private tabSelected: string = 'column';
         private havePicture: boolean = false;
+        private lorem: string = '';
 
         private created() {
             this.onGetEvent();
+            const fastLoremIpsum = require('fast-lorem-ipsum');
+
+            this.lorem = fastLoremIpsum(200, 'w');
         }
 
         private changeTab(index: string) {
