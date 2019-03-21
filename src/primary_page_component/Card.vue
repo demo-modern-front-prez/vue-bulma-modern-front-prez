@@ -10,13 +10,13 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    import Column from '@/components/Column.vue';
-    import Grid from '@/components/ColumnText.vue';
-    import ProgressBar from '@/components/ProgressBar.vue';
+    import Column from '../components/Column.vue';
+    import Grid from '../components/ColumnText.vue';
+    import ProgressBar from '../components/ProgressBar.vue';
     import EventBus from '../services/event-bus.vue';
+    import IdentityCard from '../components/IdentityCard.vue';
+    import WhitePage from '../components/WhitePage.vue';
     import FooterCard from '@/components/FooterCard.vue';
-    import IdentityCard from '@/components/IdentityCard.vue';
-    import WhitePage from '@/components/WhitePage.vue';
 
     @Component({
         components: {

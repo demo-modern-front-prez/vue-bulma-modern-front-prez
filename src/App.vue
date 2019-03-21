@@ -14,9 +14,9 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    import Menu from '@/components/Menu.vue';
-    import Navbar from '@/components/Navbar.vue';
-    import Card from '@/components/Card.vue';
+    import Menu from '@/primary_page_component/Menu.vue';
+    import Navbar from '@/primary_page_component/Navbar.vue';
+    import Card from '@/primary_page_component/Card.vue';
 
     @Component({
         components: {
